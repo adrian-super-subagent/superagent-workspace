@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f6fb;
+      --glow: rgba(79, 70, 229, 0.16);
+      --fg: #16181d;
+      --muted: #5b6472;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0f14;
+        --glow: rgba(129, 140, 248, 0.14);
+        --fg: #f2f3f7;
+        --muted: #a3aab8;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      background:
+        radial-gradient(48rem 32rem at 50% -20%, var(--glow), transparent 70%),
+        var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      text-align: center;
+    }
+
+    main {
+      max-width: 40rem;
+    }
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.75rem, 10vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.6;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hello, world!</h1>
+    <p>This page is up and running.</p>
+  </main>
+</body>
+</html>
